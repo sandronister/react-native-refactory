@@ -4,16 +4,17 @@ import {Text} from 'react-native'
 import Padrao from '../estilo/Padrao'
 
 
-export const Inverter = props =>{
-    const inv = props.texto.split('').reverse().join('')
+export const Inverter = params =>{
+    const inv = params.texto.split('').reverse().join('')
     return <Text style={Padrao.ex}>{inv}</Text> 
 }
 
-export const Megasega = props =>{
+export const Megasega = params =>{
     const [min,max] = [1,60]
-    const numeros = Array(props.numeros || 6).fill(0)
+    const numeros = Array(params.numeros || 6).fill(0)
 
-    console.log(numeros)
+    console.log(this.props)
+
     for(let i=0;i< numeros.length;i++){
         let novo =0 
 
