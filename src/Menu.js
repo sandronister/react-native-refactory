@@ -7,8 +7,20 @@ import { Inverter, Megasega } from './components/Multi';
 import Contador from './components/Contador'
 import Plataforma from './components/Plataforma'
 import ValidaProps from './components/ValidarProps'
+import Evento from './components/Evento'
+import {Avo} from './components/ComunicacaoDireta'
+import TextoSincronizado from './components/ComunicacaoIndireta'
 
 export default createDrawerNavigator({
+    TextoSincronizado:{
+        screen:TextoSincronizado
+    },
+    Avo:{
+      screen:()=><Avo nome="João" sobrenome="Silva"/>
+    },
+    Evento:{
+        screen:Evento
+    },
     ValidaProps:{
         screen:()=><ValidaProps ano={18} label='Vai'/>
     },
